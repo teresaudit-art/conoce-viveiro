@@ -1,0 +1,970 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-corporativo-1: rgb(15, 148, 131);;
+    --color-corporativo-2: rgb(172, 244, 221);  
+    
+}
+
+body footer {
+    overflow-x: hidden;
+}
+
+
+
+
+header {
+    background-color: rgb(192, 245, 223);
+}
+/* LOGO VIVEIRO */
+header img {
+    width: 7%;
+    height: 5%;
+    margin-left: 1vw;
+}
+
+/* MENU HOME */
+
+
+
+
+
+
+
+.burger {
+        color: white;
+        cursor: pointer;
+        font-size: 2vw;
+        display: none;
+        font-size: 6vw;
+    
+}
+
+
+
+ #top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: var(--color-corporativo-2);
+    z-index: 9999;
+}
+
+
+ .menu{
+    list-style: none;
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    gap: 9vw;
+    margin-left: 2.5vw;
+    margin-top: 0.75vw;
+   
+}
+
+.menu a {
+    color: var(--color-corporativo-1);
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.menu li:hover {
+    
+    transition: 0.43s;
+    transform: scale(1.3);
+}
+.menu a:hover {
+    
+   color: white;
+}
+
+
+/*  slideshow */
+
+.img_presentacion {
+    position: relative;
+}
+
+/* Contenedor del logo, lo posicionamos sobre el slideshow */
+.logo-container {
+    position: absolute;
+    top: 20px;  
+    left: 50%;
+    transform: translateX(-50%);  
+    z-index: 10;  
+}
+
+.logo-container img {
+    margin-top: 9vw;
+    width: 60vw;  /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+.img_presentacion p {
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: impact;
+    color: rgb(255, 255, 255);
+}
+
+
+/* imagenes slideshow */
+
+.slideshow-container {
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
+    
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s;
+}
+
+.slide img {
+    width: 100%;
+    
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+
+button.prev {
+    left: 10px;
+}
+button.next {
+    right: 10px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* TITULO SECCIONES */
+
+h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--color-corporativo-1);
+    margin-left: 3vw;
+    font-size: 6vw;
+    margin-top: 10vw;
+}
+
+
+
+
+/* SECCION PRESENTACIÓN */
+
+#presentacion {
+    overflow-x: hidden;
+}
+#presentacion .texto_pres {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-corporativo-1);
+    font-size: 20px;
+    text-align: center;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 4vw;
+}
+
+.video_viveiro {
+    display: flex;
+    justify-content: center;
+}
+
+#presentacion iframe {
+    margin-top: 3.5vw;
+    height: 31vw;
+    width: 52vw;
+}
+
+
+
+#presentacion hr {
+    border: none;
+    border-top: 2px solid rgb(15, 148, 131);
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 4vw;
+}
+
+
+/*  SECCIÓN QUE VER */
+
+#quever {
+    overflow: hidden;
+}
+
+.sitios {
+    margin-top: 4vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: row ;
+    background-color: var(--color-corporativo-2);
+}
+
+#quever img {
+    width: 27vw;
+    height: 19vw;
+    object-fit: cover;
+}
+.sitios_body {
+    margin-left: 2vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sitios_body h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3vw;
+    color: var(--color-corporativo-1);
+    
+}
+
+.sitios_body p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-right: 3vw;
+    margin-top: 1vw
+}
+
+/* seccion gastro */
+
+/* cards de platos tipicos */
+
+
+.cardscont {
+    display: flex;
+    flex-direction: row;
+    padding:4vw;
+    justify-content: space-between;
+   
+}
+
+.card img {
+    height: 15vw;
+    width: 22vw ;
+    top: 0; 
+    left: 0; 
+    object-fit: cover
+}
+
+
+.cardscont .card {
+   
+    top: 0; 
+    left: 0; 
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+.card_body h5 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5vw;
+    color: var(--color-corporativo-1);
+}
+
+.card_body p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 1vw
+}
+
+.cardscont .card .card_body {
+position: absolute;
+right: -100%;
+top: 0;
+width: 100%;
+height: 100%;
+padding: 1.6rem;
+background-color: rgba(248, 249, 249, 0.653);
+backdrop-filter: blur(5px);
+display: flex;
+flex-direction: column;
+justify-content: center;
+transition: 0.6S;
+}
+
+.cardscont .card:hover .card_body {
+    right: 0;
+}
+
+.cardscont .card .card_body  {
+    border: none;
+    outline: none;
+    background-color: rgba(182, 247, 229, 0.463);
+    width: 100%;
+    padding: 12px;
+    font-family: var(--text-cuerpo);
+    font-size: 2vw;
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* texto explicativo general gastro */
+
+#gastronomia .gastro_general {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-corporativo-1);
+    font-size: 20px;
+    text-align: center;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    padding: 4vw
+}
+
+.gastro_mapa {
+
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    margin-top: 3vw;
+    width: 61vw;
+    height: 35vw;
+}
+
+
+
+/* APARTADO ENCUÉNTRANOS */ 
+
+.loc_cont {
+    display: flex;
+    flex-direction: row;
+    padding: 4vw;
+    margin-top: -2vw;
+    overflow: hidden;
+}
+
+.loc_cont img {
+    width: 30vw;
+    margin-left: 7vw;
+}
+
+.loc_bus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vw;
+}
+
+.loc_bus p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* botón dirección tickets */
+.tickets {
+    display: flex;
+    justify-content: center;
+    margin-top: 8em;
+    margin-bottom: 2em;
+    width: 120px;
+    height: 60px;
+    background-color: var(--color-corporativo-1);
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+.texto_ticket {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+
+.tickets:hover {
+    
+    background-color:var(--color-corporativo-2);
+    color: var(--color-corporativo-1);
+    transition: 0.33s;
+    transform: scale(1.1);
+    border: none;
+}
+
+/* APARTADO NEWSLETTER en página nueva*/
+
+/* IMAGEN INICIO */
+
+
+#periodico {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .periodico_cont {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .periodico_imagen {
+    width: 99vw; 
+    height: 35vw;
+   
+    
+  }
+  
+  .periodico_titulo {
+    position: absolute; /* Posición absoluta dentro del contenedor relativo */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+    color:var(--color-corporativo-1);
+    font-size: 8vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejor visibilidad */
+    text-align: center;
+  }
+  
+
+/* LINEA DE NOTICIAS */
+  .timeline {
+    overflow: hidden;
+    padding: 10vw;
+    height: auto;
+    margin-top: -7vw;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin-top: 48vw;
+    width: 0.5vw;
+    height: 225vw;
+    background: var(--color-corporativo-1);
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .timeline-item.left {
+    text-align: right;
+    padding-right: 60px;
+  }
+  
+ 
+  
+  .timeline-item.right {
+    text-align: left;
+    padding-left: 60px;
+    margin-left: 50%;
+  }
+  
+
+  
+  .content h3 {
+    font-size: 20px;
+    color: var(--color-corporativo-1);
+    margin-left: 0vw;
+  }
+
+  
+  .content h4 {
+    font-family: impact;
+    font-size: 6vw;
+    color: var(--color-corporativo-1);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  
+  .content p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* imagenes noticias */
+
+ .img_timeline img {
+    width: 30vw;
+    height: 15vw;
+    margin-top: 3vw;
+  }
+
+  /* boton noticias */
+  .mas_noticias {
+    display: flex;
+    justify-content: center;
+  }
+
+  .boton_noticias {
+    margin-top: 8em;
+    margin-bottom: 2em;
+    width: 10em;
+    height: 5em;
+    background-color: var(--color-corporativo-1);
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .boton_noticias:hover {
+    
+    background-color:var(--color-corporativo-2);
+    color: var(--color-corporativo-1);
+    transition: 0.33s;
+    transform: scale(1.1);
+    border: none;
+}
+
+  /* GRAFICO DE MAREAS */
+
+  #grafico {
+   
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3vw;
+    margin-bottom: 8vw;
+    
+    
+}
+
+    #grafico > div {
+    width: 60VW;
+}
+
+.mareas_cont {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 3vw;
+    gap: 2vw;
+}
+
+.mareas_cont img {
+    width: 40vw;
+}
+
+
+@media (max-width: 768px) {
+
+
+section {
+        flex-direction: column;
+    }
+
+    section > h2 {
+        width: 100%;
+        font-size: 2rem;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    section > div {
+        width: 100%;
+    }
+}
+
+#grafico p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 2vw
+}
+
+.warning {
+    color: var(--color-corporativo-1);
+}
+
+/* footer */
+
+#redes {
+    background-color: var(--color-corporativo-2);
+}
+
+.redes_cont {
+    display: flex;
+    flex-direction: row;
+}
+
+.redes_cont iframe {
+    width: 100%;
+}
+
+.redes_sociales {
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.redes_sociales img {
+    width: 50vw;
+}
+
+.redes_iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10vw;
+    margin-top: 3vw;
+}
+
+.redes_iconos img {
+    width: 5vw;
+}
+
+.redes_iconos img:hover {
+    transition: 0.33s;
+    transform: scale(1.1);
+}
+
+.mapa_footer iframe {
+    width: 49.5vw;
+    height: 40vw;
+
+    margin-top: revert-layer
+}
+
+/* MEDIAQUERYS TABLETA */
+
+@media only screen and (min-width: 1200px){
+    .menu a {
+        
+        font-size: 25px;
+        
+    
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    /* MENU DESPLEGABLE */
+
+    #top {
+        position: fixed;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    .burger {
+        display: flex;
+        padding-right: 4vw;
+    }
+
+    .menu {
+        margin: 0;
+        background: var(--secondary-color);
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        height: calc(100% );
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        z-index: 1;
+        transition: all 0.33s;
+    }
+
+    .menu a {
+        
+        font-size: 6vw;
+       
+    }
+
+    .menulink {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .menu-show {
+        right: 0;
+        background-color: var(--color-corporativo-2);
+    }
+
+    /* inicio */
+
+    header img {
+        width: 10%;
+        
+    }
+
+    .img_presentacion p {
+        font-size: 15px;
+       
+    }
+
+    #presentacion .texto_pres {
+        font-size: 12px;
+    }
+
+    h3 {
+        
+        margin-left: 4vw;
+    }   
+
+    button.prev, button.next {
+    
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    /* texto sitios que ver */
+
+   .sitios_body p {
+
+    font-size: 12px;
+
+   }
+
+   /* imagenes de que ver sitios */
+
+   #quever img {
+    width: 37vw;
+    height: 25vw;
+    }
+
+        /* cambio de fila a galeria en las imagenes de gastronomia para que se vea mejor su contenido  */
+    .cardscont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        grid-gap: 20px; /* Espaciado entre elementos */
+        max-width: 800px; /* Ancho máximo para centrar */
+        margin: 0 auto; /* Centrar la galería */
+    }
+
+    /* tamaño imagenes gastro más grandes */
+    .card img {
+        height: 25vw;
+        width: 42vw;
+    } 
+
+     /* contenido de las cards de gastronomia */
+
+    .card_body h5 {
+       
+        font-size: 4vw;
+        
+    }
+
+    .card_body p {
+        
+        font-size: 12px;
+    
+    }   
+
+    #gastronomia .gastro_general {
+       
+        font-size: 12px;
+        
+    }
+   
+    /* cambio de tamaño del parrafo de encuentranos para mejor lectura del usuario */
+    .loc_bus p {
+        
+        font-size: 12px;
+    }
+
+    .tickets {
+     
+        font-size: 10px;
+        
+    }
+    
+    /* pagina de noticias */
+
+    .content p {
+        font-size: 12px;
+        
+    }
+
+    /* correguimos la altura de la línea alargándola */
+
+    .timeline::before {
+       
+        height: 2200px;
+
+    } 
+
+    .img_timeline img {
+        width: 200px;
+        height: 100px;
+    } 
+    /* aumentamos boton de más noticias para mejor visión */
+
+    .boton_noticias {
+      
+        font-size: 12px;
+        
+    }
+
+    /* modificamos la disposicion del apartado del gráfico */
+
+    .mareas_cont {
+     
+        flex-direction: column;
+    } 
+
+    .mareas_cont img {
+        width: 60vw;
+    }
+
+    #grafico p {
+        
+        font-size: 12px;
+        
+    }
+
+} 
+
+/* MEDIAQUERYS MOVIL */
+
+    @media screen and (max-width: 480px) {
+
+        body {
+            overflow-x: hidden;
+        }
+
+        h3 {
+            font-size: 8vw;
+        }
+        #top {
+            position: fixed;
+        }
+      
+       
+    
+    
+
+        .sitios {
+            flex-direction: column;
+        }
+
+        #quever img {
+            width: 100%;
+            height: 65vw;
+        }
+
+        .sitios_body h4 {
+            
+            margin-top: 2vw;
+            font-size: 20px;
+            
+        }
+
+        .sitios_body p {
+        
+           margin-bottom: 2vw;
+        
+        }  
+
+        .timeline {
+            margin-right: 10vw;
+        }
+
+        /* quitamos la linea d noticias para agrandar el texto y fotos */
+        .timeline::before {
+            display: none;
+            height: 2800px;
+        }
+
+
+        /* centramos los textos y fotos */
+
+       
+
+        .timeline-item {
+            width: 100%;
+            
+        }
+
+        .timeline-item.left {
+            text-align: center;
+             padding-right: 0; 
+             margin-right: 0;
+        }
+
+        .timeline-item.right {
+            text-align: center;
+            padding-left: 0; 
+            margin-left: 3vw;
+        }
+
+        .content h4 {
+            
+            font-size: 8vw;
+            
+    }
+
+    /* modificamos tamaño del texto de la seccion del grafico */
+
+        .content h3 {
+        font-size: 3vw;
+        color: var(--color-corporativo-1);
+        margin-left: 0vw;
+    }
+
+        
+} 
